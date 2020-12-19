@@ -1,0 +1,3 @@
+- Folder này chứa những file đa phương tiện (ảnh, css, js, audio, video, ...)
+- Có thể dùng dịch vụ bên thứ 3 (amazon, ...) để chứa những file đa phương tiện này
+- Có thể dùng bower để cài thư viện bên thứ 3

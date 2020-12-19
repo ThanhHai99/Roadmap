@@ -1,0 +1,9 @@
+1. Định nghĩa:
+  - Như ngôn ngữ lập trình cho các trang web
+  - Thực thi trên các trình duyệt và một số môi trường khác (NodeJS, Apache, ...)
+  - ĐƠN LUỒNG
+  - Hỗ trợ phong cách lập trình hướng đối tượng
+  - JS KHÔNG có overloading
+  - Viết code theo cấu trúc ES6
+  - Chuyển code từ ES6 về ES5 để server có thể biên dịch
+  

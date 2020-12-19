@@ -1,0 +1,3 @@
+1. Định nghĩa:
+  - npm (node package management): dùng để quản lý những thư viện dùng trong dự án NodeJS
+  - 

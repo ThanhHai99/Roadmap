@@ -1,0 +1,4 @@
+1. Giới thiệu:
+  - Được viết bằng javascript
+  - Tạo từ năm 2009
+  
