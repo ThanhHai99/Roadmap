@@ -1,0 +1,2 @@
+- Chứa những file xử lý font-end, người dùng có thể xem được nên viết phải đảm bảo lỗi bảo mật cho ứng dụng.
+- Ngoài ra, đây là nơi kích nổ (emit) sự kiện và lắng nghe (on) khi sự kiện xảy ra.
