@@ -1,0 +1,1 @@
+- Note: Mail root must turn on access of the application is less secure, Use your phone to login, 2-step verification

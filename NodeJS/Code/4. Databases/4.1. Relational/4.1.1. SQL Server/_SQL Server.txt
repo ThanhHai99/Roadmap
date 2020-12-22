@@ -1,0 +1,3 @@
+- Server paramater taken from "SQL Server Configuration Manager App".
+- You must turn on "TCP/IP" in SQL "Server Network Configuration".
+- You choose ip network of network card, config TCP Dynamic Ports and turn on enable.
