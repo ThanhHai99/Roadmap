@@ -1,0 +1,12 @@
+1. Giới thiệu:
+  - ES (ECMAScript).
+  - ES6 là phiên bản chuẩn nhất của ES do hiệp hội các nhà sản xuất máy tính Châu Âu đề xuất làm tiêu chuẩn cho JS.
+  - ES6 được khá nhiều browser đáp ứng => Vì vậy nếu viết theo chuẩn ES cao hơn ES6 thì phải tìm cách chuyển về ES6.
+
+2. Chức năng của ES6
+  - Arrow funcion: Có thể tạo hàm bằng cách dùng dấu mũi tên =>
+  - Block Scoped: Định nghĩa biến với khóa let, cách định nghĩa này thì biến chỉ tồn tại trong phạm vi khối của nó (Block scope).
+  - Destructuring Asignments: Tạo các biến từ một mảng.
+  - Default Parametes: Gán giá trị mặc định cho các tham số.
+  - Template String: tạo template HTML đơn giản.
+  - Weak, Set: Kiểu dữ liệu mới.
