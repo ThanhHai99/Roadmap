@@ -1,0 +1,7 @@
+- sequelize cli
+	+ 'sequelize init': Init sequelize
+	+ 'sequelize migration:create --name create_table_name': create a migration
+	+ 'sequelize db:migrate': create all migration
+
+
+
