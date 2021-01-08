@@ -1,4 +1,4 @@
-const client = require("./../config/Redis")();
+const client = require("./../config/Memcached")();
 
 let index = (req, res) => {
   res.end("signIn page");
@@ -12,7 +12,7 @@ let store = async (req, res) => {
   try {
     console.log("controller");
     
-    //save to Redis
+    //save to Memcached
     await client.setAsync(req.body.email, req.body.psw, { expires:5000 });
     const password = await client.getAsync(req.body.email);
     console.log("The account "+ req.body.email +" has password: " + password);
