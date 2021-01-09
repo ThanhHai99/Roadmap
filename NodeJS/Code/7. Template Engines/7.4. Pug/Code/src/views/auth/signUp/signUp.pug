@@ -1,0 +1,27 @@
+extends ../../layouts/auth/master
+
+block content
+  form(method='POST' action='/signUp' style='border:1px solid #ccc')
+    div.container
+      h1 Sign Up
+      p Please fill in this form to create an account.
+      hr
+      label(for='email')
+        b Email
+      input(type='text' placeholder='Enter Email' name='email' required='')
+      label(for='psw')
+        b Password
+      input(type='password' placeholder='Enter Password' name='psw' required='')
+      label(for='psw-repeat')
+        b Repeat Password
+      input(type='password' placeholder='Repeat Password' name='psw-repeat' required='')
+      label
+        input(type='checkbox' checked='checked' name='remember' style='margin-bottom:15px')
+        |  Remember me
+      p
+        | By creating an account you agree to our 
+        a(href='#' style='color:dodgerblue') Terms &amp; Privacy
+        | .
+      div.clearfix
+        button.cancelbtn(type='button') Cancel
+        button.signupbtn(type='submit') Sign Up
