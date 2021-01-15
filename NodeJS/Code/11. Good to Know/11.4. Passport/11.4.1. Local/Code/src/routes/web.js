@@ -10,29 +10,36 @@ let router = express.Router();
 
 let configRoutes = (app) => {
   router.get("/",
+    auth.checkLoggedIn,
     home.index
   );
 
   router.get("/signUp",
-    auth.create
+    auth.checkLoggedOut,
+    auth.getSignUp
   );
 
   router.post("/signUp",
     authValid.signUp,
-    auth.store
+    auth.checkLoggedOut,
+    auth.postSignUp
   );
 
   router.get("/signIn",
-    auth.index
+    auth.checkLoggedOut,
+    auth.getSignIn
   );
 
   router.post("/signIn",
     passport.authenticate("local", {
       successRedirect: "/",
       failureRedirect: "/signIn",
-      // successFlash: true,
-      // failureFlash: true
     })
+  );
+
+  router.get("/signOut",
+    auth.checkLoggedIn,
+    auth.getSignOut
   );
 
   app.use("/", router);

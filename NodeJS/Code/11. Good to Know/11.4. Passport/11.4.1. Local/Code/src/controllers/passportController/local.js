@@ -8,6 +8,22 @@ let LocalStratery = passportLocal.Strategy;
  * Valid user account type local
  */
 let initPassportLocal = () => {
+
+  //Save userId to session
+  passport.serializeUser((user, done) => {
+    done(null, user._id);
+  });
+
+  passport.deserializeUser(async (id, done) => {
+    try {
+      let user = await UserModel.findUserByIdForSessionToUse(id);
+      user = user.toObject();
+      return done(null, user);
+    } catch (error) {
+      return done(error, null);
+    }
+  });
+
   passport.use(
     new LocalStratery({
         usernameField: "email",
@@ -30,21 +46,6 @@ let initPassportLocal = () => {
       }
     )
   );
-  
-  //Save userId to session
-  passport.serializeUser((user, done) => {
-    done(null, user._id);
-  });
-
-  passport.deserializeUser(async (id, done) => {
-    try {
-      let user = await UserModel.findUserByIdForSessionToUse(id);
-      user = user.toObject();
-      return done(null, user);
-    } catch (error) {
-      return done(error, null);
-    }
-  });
 };
 
 module.exports = initPassportLocal;

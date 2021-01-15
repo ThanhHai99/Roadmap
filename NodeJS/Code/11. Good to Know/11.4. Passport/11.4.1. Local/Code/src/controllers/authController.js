@@ -1,15 +1,15 @@
 import { validationResult } from "express-validator/check";
 import { auth } from "./../services/index";
 
-let index = (req, res) => {
+let getSignIn = (req, res) => {
   return res.render("auth/signIn/signIn");
 }
 
-let create = (req, res) => {
+let getSignUp = (req, res) => {
   return res.render("auth/signUp/signUp");
 };
 
-let store = async (req, res) => {
+let postSignUp = async (req, res) => {
   const validatorErrors = validationResult(req);
   if(!validatorErrors.isEmpty()) {
     const errors = Object.values(validatorErrors.mapped());
@@ -28,29 +28,30 @@ let store = async (req, res) => {
   }
 };
 
-let show = (id) => {
-
+let getSignOut = (req, res) => {
+  req.logout();
+  return res.redirect("/signIn");
 };
 
-let edit = (req, res) => {
-
+let checkLoggedIn = (req, res, next) => {
+  if (!req.isAuthenticated()) {
+		return res.redirect("/signIn");
+	}
+	next();
 };
 
-let update = (req, res) => {
-
-};
-
-let destroy = (req, res) => {
-
-};
-
+let checkLoggedOut = (req, res, next) => {
+  if (req.isAuthenticated()) {
+		return res.redirect("/");
+	}
+	next();
+}; 
 
 module.exports = {
-  index,
-  create,
-  store,
-  show,
-  edit,
-  update,
-  destroy
+  getSignIn,
+  getSignOut,
+  getSignUp,
+  postSignUp,
+  checkLoggedIn,
+  checkLoggedOut
 }
