@@ -1,0 +1,52 @@
+Two-Factor Authentication (2FA)
+One-time Password (OTP)
+HMAC-based One-Time Password (HOTP)
+Time-based One-time Password (TOTP)
+
+Ví dụ 2FA:
+Khi đăng nhập vào tài khoản facebook hoặc google thì sau bước nhập email + password, 
+ta vẫn phải nhập thêm một cái mã token (thường là 6 chữ số và có thời gian hiệu lực 
+30 giây -> 1 phút) thì mới được vào tài khoản. 
+Có nhiều cách để nhận được mã này: qua email, số điện thoại hoặc là được gennerate 
+từ một ứng dụng tạo mã bên thứ ba như Google Authenticator hoặc Authy. 
+Hình thức bảo mật trên được gọi là Xác thực 2 lớp – Two-Factor Authentication (2FA).
+
+Two-Factor Authentication (viết tắt 2FA hoặc TFA) là một phương pháp xác thực
+người dùng dựa trên 2 yếu tố,
+một là mật khẩu và hai là một thứ mà người dùng sở hữu: như vân tay, SMS, gửi mã token
+tới Email hoặc tốt hơn nữa là One-time Password (OTP) (mật khẩu một lần có giới hạn
+hiệu lực theo thời gian).
+
+One-Time Password (OTP) sẽ làm bây giờ. OTP là một loại mã token mà chỉ có thể 
+được sử dụng một lần rồi sau đó nó sẽ bị hủy, không được phép sử dụng tới lần thứ hai.
+
+Làm sao để tạo mã token mà thỏa mãn điều kiện là duy nhất (unique)? Dùng HOTP!!!
+
+HMAC-based One-Time Password – HOTP là thuật toán sinh mã OTP dựa trên hàm băm HMAC_SHA-1,
+nó dùng 2 thành phần: 
+thứ nhất là một Chuỗi Secret cố định, còn thành phần thứ hai là một bộ đếm (Counter)
+bộ đếm này dùng “Moving-Factor” (dịch ra là một yếu tố di chuyển, cũng có thể coi nó
+như một chuỗi random ngẫu nhiên cho dễ hiểu cũng được.)
+
+Vì kết quả output của hàm băm HMAC_SHA-1 ở trên là một giá trị có độ dài 160 bit = 20 bytes
+nên chúng ta sẽ cần thêm một bước (dùng thuật toán TOTP) làm ngắn gọn output để người dùng
+dễ dàng đọc được - như thường thấy ở app Google Authenticator hoặc Authy.
+
+Time-based One-time Password – TOTP về cơ bản chỉ khác HOTP ở chỗ là TOTP sẽ sử dụng “thời gian” (Time) 
+để làm bộ đếm (Counter) thay vì “Moving Factor” như HOTP. 
+Chính vì việc sử dụng counter là thời gian nên phía Server lẫn Client khi đã có chung Secret Key rồi thì
+không cần có sự tương tác qua lại nữa. 
+Vì cả 2 phía đều có quyền truy cập vào thời gian. 
+Điều này cũng trả lời cho một thắc mắc đó là tại sao khi mình thử tắt mạng cái điện thoại vậy mà 
+Token sinh ra của mấy cái app Google Authenticator hay Authy vẫn sử dụng được ngon lành chả vấn đề gì =))
+
+Giải thích cụ thể hơn cho các bạn đó là: phía Server sẽ so sánh giá trị token mà người dùng submit
+từ phía client lên với tất cả các token được sinh ra trong cùng một khoảng thời gian nhất định trên Server.
+(thường là 30 giây đến 1 phút), và dĩ nhiên là nếu trùng nhau thì bạn sẽ pass qua vòng xác thực 2 lớp này.
+Đọc đến đây nhiều bạn có thể sẽ thắc mắc tiếp là: Ủa thế server và client khác múi giờ 
+(Time zone) thì làm sao mà khoảng thời gian của 2 phía có thể đồng nhất được nhỉ?
+
+Giải pháp là chúng ta có thể convert thời gian của cả 2 phía về dạng Unix Timestamp 
+(hay còn gọi với tên khác là Epoch Time) rồi so sánh chúng.
+Hiểu một cách đơn giản thì Unix Timestamp là số giây đếm tăng dần từ một điểm thời gian
+cố định trong quá khứ đó là ngày 01/01/1970 (UTC) 00:00:00
