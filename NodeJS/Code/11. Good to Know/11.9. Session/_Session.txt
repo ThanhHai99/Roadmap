@@ -1,0 +1,6 @@
+In file config (session.js), have to option: save to store or no
+
+session will remove when reload page
+==> We save to store (redis, mongo, ...)
+
+In case Save by store, if id duplicate session has not save
