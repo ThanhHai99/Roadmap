@@ -1,0 +1,19 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "\u001b[A\u001b[B",
+    "start": "babel-node src/server.js"
+  },
+  "author": "ThanhHai99",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "mime": "^2.5.0"
+  }
+}
