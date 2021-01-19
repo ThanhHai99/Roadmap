@@ -1,0 +1,7 @@
+Để khởi tạo một logger ta sử dụng winston.createLogger. Một số tham số trong logger ta cần chú ý như:
+- level: cho phép ta sử dụng log đối với các mức level nhỏ hơn hoặc bằng level được thiết lập
+  dựa trên thứ tự levels đã được quy định.
+- levels: mặc định winston.config.npm.levels là các levels mặc định đã được thiết lập sẵn với màu sắc
+  tương ứng. Ta có thể tự custom các levels log và màu sắc của các level
+- transport: Thiết lập cách thức log của logger.
+- format: cho phép điều chỉnh thiết lập định dạng của log.
