@@ -1,0 +1,15 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
+  },
+  "author": "ThanhHai99",
+  "license": "ISC",
+  "dependencies": {
+    "bunyan": "^1.8.15"
+  }
+}
