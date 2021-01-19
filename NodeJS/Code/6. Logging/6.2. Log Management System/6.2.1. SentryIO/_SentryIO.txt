@@ -1,0 +1,2 @@
+View logs
+https://sentry.io/organizations/saigon-university/issues/?project=5598295#
