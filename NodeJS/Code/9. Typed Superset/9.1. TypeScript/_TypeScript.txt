@@ -1,0 +1,47 @@
+Link1: https://www.digitalocean.com/community/tutorials/setting-up-a-node-project-with-typescript
+
+- Node là một môi trường run-time => có thể viết JS phía server.
+- Nhưng JS là ngôn ngữ động (dynamic) và đánh máy yếu (weak typed).
+- Nhưng JS thiếu tính năng gõ tĩnh mạnh mẽ (strong static typing)
+  => TypeScript xuất hiện để giải quyết điều đó.
+- TypeScript là siêu tập hơp (super-set) được đánh máy (tùy chọn) có thể giúp xây dựng và quản lý
+  những dự án JavaScript lớn.
+- TypeScript có thể coi là JavaScript với các tính năng bổ sung như nhập tĩnh mạnh mẽ,,
+  biên dịch và hướng đối tượng.
+- CHÚ Ý: TypeScript là một tập hợp siêu JavaScript
+  => JavaScript đều là mã TypeScript hợp lệ
+- Lý do dùng TypeScript
+  1. Optional static typing.
+  2. Type inference.
+  3. Ability to use Interfaces.
+
+//=======================================================================================================
+Khởi tạo dự án
+mkdir node_project
+cd node_project
+npm init
+Cài tsc
+npm i -g npx
+npm i -g typescript
+Cài đặt dự án
+npm install -D typescript@3.3.3
+npm install -D tslint@5.12.1
+npm install -S express@4.16.4
+npm install -D @types/express@4.16.1
+Tạo file mới có tên là tsconfig.json và có nội dung sau
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist"
+  },
+  "lib": ["es2015"]
+}
+- module: Chỉ định phương pháp tạo code module. Node sử dụng commonjs.
+- target: Chỉ định mức ngôn ngữ đầu ra.
+- moduleResolution: Giúp trình biên dịch tìm ra những thư viện đã import. Giá trị "Node" bắt chước cơ chế phân giải module Node.
+- outDir: nơi xuất file js
+- Có thể tạo file tsconfig.json bằng cách gõ "tsc init"
