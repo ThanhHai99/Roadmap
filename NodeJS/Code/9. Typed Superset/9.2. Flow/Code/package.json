@@ -1,0 +1,23 @@
+{
+  "name": "code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "flow": "flow",
+    "flow:check": "flow check src",
+    "flow:build": "flow-remove-types src -d lib --all --pretty",
+    "flow:deps": "flow-typed install"
+  },
+  "author": "ThanhHai99",
+  "license": "ISC",
+  "devDependencies": {
+    "flow-bin": "^0.142.0",
+    "flow-remove-types": "^2.142.0",
+    "flow-typed": "^3.2.1"
+  },
+  "dependencies": {
+    "lodash": "^4.17.20"
+  }
+}

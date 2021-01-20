@@ -1,0 +1,79 @@
+1. Code nhanh hơn
+	Bạn mệt mỏi khi phải chạy code để tìm lỗi?
+	Flow xác định các vấn đề khi bạn viết mã. 
+	Đừng lãng phí thời gian của bạn để đoán và kiểm tra.
+
+2. Code thông minh hơn
+	Thật khó để xây dựng các công cụ thông minh cho các ngôn ngữ động như JavaScript.
+	Flow hiểu code của bạn và cung cấp kiến ​​thức về nó,
+	cho phép các công cụ thông minh khác được xây dựng trên Flow.
+
+3. Code bí mật hơn
+	Thực hiện những thay đổi lớn đối với các source code lớn có thể rất đáng sợ.
+	Flow giúp bạn cấu trúc lại một cách an toàn, vì vậy bạn có thể tập trung
+	vào những thay đổi bạn muốn thực hiện và ngừng lo lắng về những gì bạn có thể phá vỡ.
+
+4. Code lớn hơn
+	Làm việc trong dự án với nhiều nhà phát triển có thể gây khó khăn cho việc
+	duy trì branch (git) của bạn.
+	Flow giúp ngăn chặn sự phục hồi (rebases - git) xấu.
+	Flow giúp bảo vệ thư viện được thiết kế cẩn thận của bạn khỏi bị lạm dụng và hiểu sai.
+	Flow giúp bạn hiểu mã bạn đã viết sáu tháng trước :)
+
+//==============================================================================================
+
+Link: https://codeburst.io/getting-started-with-flow-and-nodejs-b8442d3d2e57
+Link2: https://www.youtube.com/watch?v=0HlqX4lQZas
+Link3: https://www.youtube.com/watch?v=xWMuAUbXcdQ
+- Cài đặt Flow
+	npm i flow-bin -SD
+- Let's add help script package.json
+	"scripts": {
+		"flow": "flow",
+		"flow:check": "flow check src"
+	}
+- Lệnh trên được sử dụng để đảm bảo luồng thực thi có thể truy cập được (đề phòng)
+- Lệnh thứ hai hướng dẫn luồng kiểm tra tất cả các tệp trong thư mục ./src.
+- Tạo một file config luồng mới tại ./flowconfig với nội dung sau:
+	[ignore] // bỏ qua kiểm tra lỗi
+	.*/node_modules/.*
+	[include]
+	[libs]
+	flow-typed // cho phép dùng các khai báo bên thứ 3
+	[options]
+	all=true // cho phép flow kiểm tra mọi tệp. Nếu không có tùy chọn này, flow chỉ kiểm tra các tệp có chú thích //@flow ở đầu tệp.
+- Bây giờ, hãy tạo file javascript được đánh theo luồng đầu tiên của chúng ta, gọi nó là src/index.js và sao chép mã sau vào bên trong
+	type Point2d = {|
+		x: number,
+		y: number
+	|};
+	const myPoint: Point2d = {
+		X: 1,
+		y: 2
+	};
+	console.log(myPoint.x, myPoint.y);
+- Chạy lệnh để kiểm tra code
+	npm run flow:check
+- Chạy code
+	Giả sử file javascript không chạy được file bằng lệnh node
+	+ Chạy lệnh sau để bỏ chú thích loại luồng
+	npm i flow-remove-types -SD
+- Thêm lệnh sau vào file package.json
+	"flow:build": "flow-remove-types ./src/ -d ./lib/ --all --pretty",
+	script sẽ lấy tất cả file từ ./src, xóa types và xuất vào thư mục ./lib
+	Thử chạy lệnh: npm run flow:build
+	+ Kiểm tra
+	+ Sau đó bạn có thể chạy với lệnh: node ./lib
+- Thư viện bên thứ 3
+	npm i flow-typed -SD
+- Thêm lệnh sau vào file package.json
+	"flow:deps": "flow-typed install",
+- Thêm Lodash
+	npm i lodash -S
+- Chạy trước
+	npm run flow:deps
+- Sửa file server
+	npm run flow:check
+
+	... tu bi 0 tình iu
+	
