@@ -1,0 +1,12 @@
+TÍNH NĂNG
+- Kết nối http/https với các API.
+- Cho phép xác thực cơ bản http đơn giản.
+- Cho phép các requet http cơ bản: GET, POST, PUT, DELETE, PATCH, ...
+- Cho phép tạo các phương thức http tùy chỉnh (PURGE, ...)
+- Kết nối trực tiếp hoặc thông qua proxy đến các API
+- Đường dẫn động, tham số truy vấn và request headers
+- Cải thiện cơ chế xử lý lỗi
+- Hỗ trợ nén file: gzip, deflate, ...
+- Theo dõi chuyển hướng nhờ gói (follow-redirects).
+- Custom lại request serializers (json, xml and url-encode, ...)
+- Hỗ trợ parse response (json, xml, ...)
