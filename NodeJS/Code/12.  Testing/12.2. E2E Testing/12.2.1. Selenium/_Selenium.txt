@@ -1,0 +1,36 @@
+***Giới thiệu
+Selenium là một công cụ test tự động mã nguồn mở và hỗ trợ nhiều nền tảng.
+Nó có thể được sử dụng trong tất cả các trình duyệt phổ biến (Chrome, Firefox, Opera, IE và Edge)
+bằng hầu hết các ngôn ngữ lập trình. Ngoài ra, nó có thể được tích hợp với các công cụ và thư viện
+thử nghiệm khác nhau. Bài viết này, sẽ trình bày một quy trình test trên
+trang lazada với selenium web-driver và Node.js.
+
+***Thực hiện
+- Ở đây chúng ta sẽ thử chạy test tự động trên https://www.lazada.vn/
+  + Đầu tiên, chúng ta kiểm tra xem trang có hộp input và nút submit.
+  + Sau đó, tạo một tên ngẫu nhiên vào hộp input và nhấn gửi.
+  + Chúng ta sẽ kiểm tra xem kết quả tìm kiếm có xuất hiện hay không.
+- Tất cả những hoạt động này sẽ được thực hiện bởi selenium web-driver.
+  Với testing framework, chúng ta sẽ sử dụng mocha & chai để viết test.
+
+***Cài đặt project
+├── ...
+│
+├── lib                         # Helper methods
+│   ├── basePage.js             # Generic functionality for tests
+│   └── homePage.js             # Home page testing functionality
+│
+├── test                        # Test suite
+│   └── homePage.test.js        # Testing in home page
+│
+├── utils                       # Utility files for testing
+│   ├── fakeData.js             # Generating random keyword for searching
+│   └── locator.js              # HTML and CSS identifier for elements to test
+│
+├── package.json                # Project dependency
+├── ...
+
+Ở đây chúng ta chạy hai test case
++ 1. Kiểm tra sự tồn tại của hộp input và nút tìm kiếm.
++ 2. Kiểm tra kết quả tìm kiếm, sau khi chúng ta đặt từ khóa
+  mong muốn vào hộp tìm kiếm và nhấn nút tìm kiếm.
