@@ -1,0 +1,6 @@
+*** Tổ chức Test Script với Mocha Framework (Gói: wdio-mocha-framework) ***
+⚪ Mocha: Là test framework
+⚪ Test framework:
+    - Dùng sắp xếp, thực thi test dễ dàng hơn
+    - Nếu không có test framework, việc tổ chức test suite, test case,
+    thứ tự chạy test case... trong Automation test rất phức tạp
