@@ -1,0 +1,25 @@
+*** Gói WebDriverIO dùng 2 loại Selector ***
+0. Copy CSS Selector & Copy XPATH bằng browser
+  0.1. Cách làm
+    - Chuột phải vào Element
+    - Chuột phải vào html đang highlight
+    - Chuột phải chọn copy > copy selector
+  0.2. Kiểm tra selector có phải duy nhất hay không bằng console
+    0.2.1. $(selector_value): $('[title="Google apps"]');
+    0.2.2. document.querySelector(selector_value):  document.querySelector('[title="Google apps"]');
+
+1. CSS Selector
+  1.1. ID:          #id_value
+  1.2. Class:       .class_value
+  1.3. Link Text:   =link_text_value
+  1.4. Attribute:   [attribute_name="value"]
+
+2. XPATH
+  2.0. Cấu trúc chung
+    //tagName[@attribute="attribute_value"]
+    //*[@attribute="attribute_value"]
+  Ví dụ:
+    //input[@type="text"]
+    //input[@id="id_value"]
+    //a[@href="https://fb.com/"]
+    //*[@class="className"]
