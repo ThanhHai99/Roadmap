@@ -1,4 +1,4 @@
-1. Giới thiệu
+1. Giới thiệu Selenium
   - Là dự án Open Source
   - Dùng làm Automation Test
   - Cho phép dùng nhiều ngôn ngữ để viết: Java, JS, C#, Python, ...
