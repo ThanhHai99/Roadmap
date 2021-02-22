@@ -1,4 +1,3 @@
-NodeJS/Code/11. Good to Know/11.5. Nodemailer/Code/node_modules/
 NodeJS/Code/3. Web Frameworks/3.2. ExpressJS/Code/node_modules/
 NodeJS/Code/3. Web Frameworks/3.1. No/Code/node_modules/
 NodeJS/Code/4. Databases/4.1. Relational/4.1.1. SQL Server/Code/node_modules/
@@ -37,6 +36,7 @@ NodeJS/Code/11. Good to Know/11.4. Passport/11.4.2. Google/Code/node_modules
 NodeJS/Code/11. Good to Know/11.4. Passport/11.4.2. Google/Code/sh/env.sh
 NodeJS/Code/11. Good to Know/11.4. Passport/11.4.3. Facebook/Code/node_modules
 NodeJS/Code/11. Good to Know/11.4. Passport/11.4.3. Facebook/Code/sh/env.sh
+NodeJS/Code/11. Good to Know/11.5. Nodemailer/Code/node_modules/
 NodeJS/Code/11. Good to Know/11.8. Cookie/Code/node_modules
 NodeJS/Code/11. Good to Know/11.9. Session/Code/node_modules
 NodeJS/Code/11. Good to Know/11.10. Token/Code/node_modules
@@ -45,5 +45,5 @@ NodeJS/Code/11. Good to Know/11.13. Two-Factor Authentication/Code/node_modules
 NodeJS/Code/11. Good to Know/11.14. DownloadSingleFile/Code/node_modules
 NodeJS/Code/11. Good to Know/11.16. UploadSingleFile/Code/node_modules
 NodeJS/Code/11. Good to Know/11.17. UploadMultipleFile/Code/node_modules
-NodeJS/Code/12.  Testing/12.2. E2E Testing/12.2.1. Selenium/Code/node_modules
-NodeJS/Code/12.  Testing/12.2. E2E Testing/12.2.1. Selenium/Code/mochawesome-report
+NodeJS/Code/12. Testing/12.2. E2E Testing/12.2.1. Selenium/Code/node_modules
+NodeJS/Code/12. Testing/12.2. E2E Testing/12.2.1. Selenium/Code/mochawesome-report

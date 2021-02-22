@@ -1,4 +1,6 @@
 1. Giới thiệu:
   - Được viết bằng javascript
   - Tạo từ năm 2009
-  
+  - NodeJS không phải là một ngôn ngữ lập trình
+  - NodeJS là một nền tảng giúp thực thi JS phía server
+    với V8 JavaScript Engine của Google viết bằng C++
