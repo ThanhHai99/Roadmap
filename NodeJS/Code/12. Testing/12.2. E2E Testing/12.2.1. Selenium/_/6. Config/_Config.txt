@@ -1,0 +1,11 @@
+Tham khảo: http://v4.webdriver.io/guide/testrunner/configurationfile.html
+
+*** Các thông số trong file cấu hình ***
+- specs: Chỉ ra các file test scripts cần test
+- host: địa chỉ ip của máy yêu cầu resource test
+- port: port của selenium server hoặc browser driver
+- path: 
+- cababilities: //thông số
+- Test framework options
+    + framework: mocha
+- logLevel: //thông báo lỗi
