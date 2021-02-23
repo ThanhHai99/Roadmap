@@ -1,0 +1,7 @@
+*** Để khởi động Browser Driver ta có 2 cách ***
+* Cách 1: Tải và khởi động Browser Driver
+    - Ưu điểm: Có thể khởi động trên máy nào đó, và yêu cầu browser test trên máy đó.
+    - Nhược điểm: Ta phải tự khởi động.
+* Cách 2: Dùng thư viện ngoài (wdio-selenium-standalone-service)
+    - Ưu điểm: không cần phải khởi động bằng tay.
+    - Nhược điểm: Không yêu cầu resource browser test trên máy khác được.
