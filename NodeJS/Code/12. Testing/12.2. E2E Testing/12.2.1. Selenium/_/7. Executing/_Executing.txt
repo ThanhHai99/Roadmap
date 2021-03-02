@@ -1,0 +1,5 @@
+*** Trong file config package.json
+"test": "wdio"
+
+Lệnh thực thi
+npm test <file-name> --<option>
