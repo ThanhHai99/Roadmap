@@ -1,4 +1,5 @@
 1. Giới thiệu Selenium
+  - Dùng thư viện WEBDRIVERIO 7.0.8 (JS)
   - Là dự án Open Source
   - Dùng làm Automation Test
   - Cho phép dùng nhiều ngôn ngữ để viết: Java, JS, C#, Python, ...
