@@ -9,14 +9,14 @@ class SecurePage extends Page {
      */
     
     get loginSuccessSecure () {
-        expect('#flash').toBeExisting();
-        expect('#flash').toHaveTextContaining('You logged into a secure area!');
+        expect($('#flash')).toBeExisting();
+        expect($('#flash')).toHaveTextContaining('You logged into a secure area!');
         return this;
     };
 
     get loginFailSecure () {
-        expect('#flash').toBeExisting();
-        expect('#flash').toHaveTextContaining('Your username is invalid!');
+        expect($('#flash')).toBeExisting();
+        expect($('#flash')).toHaveTextContaining('Your username is invalid!');
         return this;
     };
 }
