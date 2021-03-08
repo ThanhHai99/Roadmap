@@ -1,0 +1,1 @@
+Selenium API dùng để thao tác với các loại element khác nhau
