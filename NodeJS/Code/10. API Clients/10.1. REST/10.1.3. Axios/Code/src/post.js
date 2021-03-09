@@ -8,6 +8,7 @@ axios.post('http://localhost:2000/post', {
     console.log(response.data);
   })
   .catch(function (error) {
+    console.log("loi ne==================================");
     console.log(error);
   });
 
@@ -60,6 +61,7 @@ axios("http://localhost:2000/get")
 
 // *******INTERCEPTORS ************
 // Add a request interceptor
+
 axios.interceptors.request.use(function (config) {
     // Do something before request is sent
     return config;
@@ -84,6 +86,7 @@ axios.interceptors.response.use(function (response) {
 // axios.interceptors.request.eject(myInterceptor);
 
 // ***** HANDLING ERROR **********
+
 axios.get('http://localhost:2000/get')
     .catch(function (error) {
         if (error.response) {
@@ -105,7 +108,7 @@ axios.get('http://localhost:2000/get')
     });
 
 // Use validateStatus
-axios.get('http://locahost:2000/get', {
+axios.get('http://localhost:2000/get', {
     validateStatus: function (status) {
         return status < 500; // Resolve only if the status code is less than 500
     }
