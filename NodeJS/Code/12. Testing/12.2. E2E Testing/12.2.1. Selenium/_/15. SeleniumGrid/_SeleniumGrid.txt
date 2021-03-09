@@ -1,0 +1,22 @@
+*** Selenium Grid là gì? ***
+- Mô hình gồm 1 Hub (Server) và nhiều Node (Client)
+- Hub: dịch vụ được khởi tạo bằng Selenium standalone server
+- Node: khai báo với Hub, resource mà mình có thể cung cấp: loại browser...
+- Khi yêu cầu resource trên hệ thống Selenium Grid,
+  Selenium Hub sẽ tự động phân bổ yêu cầu xuống các host để thực thi.
+
+*** Cài java cho Hub ***
+
+*** Khởi động Hub ***
+- Download selenium stand alone tại https://www.selenium.dev/downloads/
+- Lệnh chạy: java -jar <file selenium stand alone> -role hub
+
+*** Đăng kí chrome node trên Hub ***
+- Máy node cũng phải có môi trường java
+- Download selenium stand alone tại https://www.selenium.dev/downloads/
+- Lệnh chạy: java -jar <file selenium stand alone> -role node -hub http://dia_chi_ip:4444/grid/register
+- Truy cập http://hub-host-ip:4444/grid/console
+
+*** Sửa file test.config.js để yêu cầu resource test trên selenium ***
+
+*** CẦN TEST THÊM ***
