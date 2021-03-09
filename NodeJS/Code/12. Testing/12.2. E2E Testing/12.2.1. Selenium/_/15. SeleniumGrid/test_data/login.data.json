@@ -1,0 +1,12 @@
+{
+    "correctCredentials": {
+        "command": "sign in success",
+        "username": "tomsmith",
+        "password": "SuperSecretPassword!"
+    },
+    "incorrectCredentials": {
+        "command": "sign in fail",
+        "username": "thanhhai",
+        "password": "thanhhai"
+    }
+}
