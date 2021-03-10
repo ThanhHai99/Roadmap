@@ -1,0 +1,11 @@
+*** SocketIO là gì ***
+
+- Để xây dựng một ứng dụng realtime cần sử dụng socketio.
+  Socketio sẽ giúp các bên ở những địa điểm khác nhau kết nối với nhau,
+  truyền dữ liệu ngay lập tức thông qua server trung gian.
+  Socketio có thể được sử dụng trong nhiều ứng dụng như chat, game online,
+  cập nhật kết quả của một trận đấu đang xảy ra,...
+
+- Socketio không phải là một ngôn ngữ, mà chỉ là 1 công cụ giúp thực hiện những ứng dụng realtime.
+  Vì thế, không thể sử dụng socketio để thay thế hoàn toàn cho một ngôn ngữ, mà phải sử dụng
+  kết hợp với một ngôn ngữ khác. Ngôn ngữ đó có thể là php, asp.net, nodejs,...
