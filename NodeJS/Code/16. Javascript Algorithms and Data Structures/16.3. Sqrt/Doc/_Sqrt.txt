@@ -1,0 +1,1 @@
+Tính căn bậc hai của một số n.
