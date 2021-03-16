@@ -1,0 +1,1 @@
+Thuật toán tìm ước chung lớn nhất.
