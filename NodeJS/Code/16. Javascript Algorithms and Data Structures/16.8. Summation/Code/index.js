@@ -17,11 +17,16 @@ let Summation1 = (a, b) => {
         };
         m = (r0 >= 10) ? 1 : 0;
         result += r0.toString().split("").pop();
+        if (i == 0 && r0 >= 10) {
+            result += "1";
+        }
     };
     return result.split("").reverse().join("");
 };
 
 (() => {
-    console.log(Summation0(34539999345345675675685685, 549634088789789789789787898));
-    console.log(Summation1("34539999345345675675685685", "549634088789789789789787898"));
+    // console.log(Summation0(34539999345345675675685685, 549634088789789789789787898));
+    // console.log(Summation1("34539999345345675675685685", "549634088789789789789787898"));
+    console.log(Summation0(99, 3));
+    console.log(Summation1("99", "3"));
 })();
