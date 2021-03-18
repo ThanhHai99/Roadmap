@@ -23,6 +23,9 @@ string Summation1(string a, string b) {
         };
         m = (r0 >= 10) ? 1 : 0;
         result += (r0 % 10) + 48;
+        if (i == 0 && r0 >= 10) {
+            result += "1";
+        };
     };
     return string(result.rbegin(), result.rend());
 };
