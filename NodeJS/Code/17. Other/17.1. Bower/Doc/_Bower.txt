@@ -1,0 +1,59 @@
+Bower là công cụ quản lý tài nguyên
+==> không cần push thư viện (fonts, css, js, ...) css hay js lên host
+
+*** CẤU HÌNH BOWER ***
+1. Cài đặt
+  - install with global
+    npm install bower -g
+2. Initial
+  - Lệnh init
+    bower init
+  - Lệnh trên sẽ tạo ra file bower.json
+3. Tạo file config
+  - Tạo file .bowerrc (cùng cấp với file bower.json) config nơi lưu thư viện code lấy từ bower
+    Nội dung:
+    {
+      "directory": "public/bower_components/"
+    }
+4. Install & Uninstall
+  - bower install (khi đã thông tin thư viện trong file bower.json)
+  - bower install <package-name> --save
+  - bower uninstall <package-name> --save
+5. Update thư viện
+  - bower update
+6. Install từ repository git
+  - Truy cập https://bower.io/search/ gõ tên package muốn cài đặt.
+  - Sau khi click link thư viện sẽ dẫn tới link repository của nhà phát hành.
+  - Cài đặt:
+    bower install <link-repository> --save
+7. Tự đăng kí repository (dùng những thư viện mà bower chưa hỗ trợ).
+  - Đẩy thư viện đó lên git
+  - Đăng ký với bower
+  - 7.1. Tạo repository mới trên github
+  - 7.2. Tạo nội dung cho repository
+    - Bắt buộc phải có file bower.json trong repository thì bower mới cho đăng ký.
+    - Nội dung:
+    {
+      "name": "demo-bower",
+      "version": "1.0.1",
+      "authors": ["ThanhHai99"],
+      "description": "Demo Bower",
+      "main": "/",
+      "keywords": [
+        "fonticons"
+      ],
+      "license": "MIT",
+      "homepage": "https://github.com/<...>.git",
+      "ignore": [
+        "README.md"
+      ]
+    }
+  - 7.3. Lệnh đăng kí
+    - bower register <package-name> link-repository
+    - install command
+      bower install --save <package-name> *** || *** bower install --save <link-repository>
+8. Hủy đăng kí
+  - Lệnh login (bằng username & pasword github)
+    bower login
+  - Lệnh hủy đăng ký
+    bower unregister <link-repository>

@@ -1,0 +1,20 @@
+{
+  "name": "code",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "ThanhHai99"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ThanhHai99/Roadmap",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "https://github.com/jquery/jquery.git#^3.6.0"
+  }
+}
