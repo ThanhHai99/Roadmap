@@ -1,0 +1,2 @@
+*** Interface Array ***
+Tạo ra mẫu cho array
