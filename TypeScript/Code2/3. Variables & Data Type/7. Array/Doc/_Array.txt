@@ -1,0 +1,3 @@
+Khai báo array:
+  - Array number: Array<number> hoặc number[]
+  - Array string: Array<string> hoặc string[]
