@@ -1,0 +1,3 @@
+*** void ***
+
+Kiểu dữ liệu trả về.
