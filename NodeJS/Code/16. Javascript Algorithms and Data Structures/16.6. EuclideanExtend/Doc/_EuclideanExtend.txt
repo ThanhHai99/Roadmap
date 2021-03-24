@@ -1,0 +1,1 @@
+Thuật toán Euclidean Extend dùng để giải phương trình ax + by = d (d = gcd(a, b))
