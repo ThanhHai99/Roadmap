@@ -1,0 +1,8 @@
+*** Access Modifiers ***
+
+            Inside  Outside Subclasses
+public      +       +       +
+private     +       -       -
+protected   +       -       +
+
+Ở JS, nếu không dùng những từ khóa trên thì mặc định là public
