@@ -1,0 +1,9 @@
+*** Abstract ***
+
+Abstract Class
+- Không thể tạo ra một đối tượng từ Abstract Class.
+- Abstract Class chỉ cho phép class khác kế thừa lại.
+
+Abstract method
+- Abstract method không có xử lý gì trong thân hàm và dùng để override lại.
+- Buộc phải override lại nếu extends từ Abstract class.
