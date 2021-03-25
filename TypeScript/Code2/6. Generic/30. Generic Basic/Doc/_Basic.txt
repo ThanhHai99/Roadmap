@@ -1,0 +1,2 @@
+*** Generic ***
+Khai báo kiểu dữ liệu ngắn gọn
