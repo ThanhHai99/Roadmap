@@ -1,0 +1,4 @@
+*** Module 01 ***
+
+- Dùng thư viện systemJS sẽ tự động load module mà file được import cần dùng.
+- Lưu ý: Phải chạy bằng XAMPP
