@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "outDir": "js",
+        "module": "amd",
+        "removeComments": false,
+        "target": "ES6",
+        "watch": true
+    }
+}

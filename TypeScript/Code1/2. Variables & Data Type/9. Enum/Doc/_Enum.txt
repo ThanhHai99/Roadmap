@@ -1,0 +1,3 @@
+*** ENUM ***
+Dùng để định nghĩa kiểu dữ liệu mới.
+Thường dùng trong việc xử lý trạng thái.

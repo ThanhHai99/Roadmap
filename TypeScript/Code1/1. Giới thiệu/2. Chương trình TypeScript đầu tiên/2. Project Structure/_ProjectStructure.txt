@@ -1,0 +1,2 @@
+Tạo cấu trúc một chương trình TypeScript.
+(Giống như website đơn giản.)

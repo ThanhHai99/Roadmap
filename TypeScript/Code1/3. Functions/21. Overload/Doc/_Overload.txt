@@ -1,0 +1,2 @@
+*** Overload ***
+Khi dùng Overload buộc phải có trường hợp any: any

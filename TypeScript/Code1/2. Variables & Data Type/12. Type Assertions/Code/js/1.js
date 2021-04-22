@@ -1,0 +1,13 @@
+let mVariable12 = "thanh hai";
+let total12_1 = mVariable12.length;
+console.log(total12_1);
+console.log(typeof mVariable12);
+console.log("======");
+let total12_2 = mVariable12.length;
+console.log(total12_2);
+console.log(typeof mVariable12);
+console.log("======");
+let total12_3 = mVariable12.length;
+console.log(total12_3);
+console.log(typeof mVariable12);
+console.log("======");
