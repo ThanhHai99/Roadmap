@@ -1,2 +1,0 @@
-*** Accessors ***
-Dùng getter, setter để get hoặc set một property

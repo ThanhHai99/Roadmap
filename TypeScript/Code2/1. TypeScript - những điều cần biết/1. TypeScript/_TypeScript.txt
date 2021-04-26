@@ -1,5 +1,0 @@
-- Ngôn ngữ mã nguồn mở được phát triển bởi Microsoft.
-- Mô hình hướng đối tượng.
-- Phát triển ứng dụng chạy phía Client hoặc Server (node.js).
-- TypeScript sinh ra mã JavaScript hoạt động tốt trên các môi trường hỗ trợ JavaScript.
-- TypeScript bao gồm JavaScript => Những gì JavaScript làm được thì TypeScript cũng làm được.

@@ -1,4 +1,0 @@
-*** Interface ***
-- Khi implement một interface,
-  Phải override lại toàn bộ method của interface
-  và phải có property đã định nghĩa trong interface.

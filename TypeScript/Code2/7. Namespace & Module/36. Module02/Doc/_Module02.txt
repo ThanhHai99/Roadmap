@@ -1,3 +1,0 @@
-*** Module 02 ***
-
-NOTE: Thực thi bằng XAMPP

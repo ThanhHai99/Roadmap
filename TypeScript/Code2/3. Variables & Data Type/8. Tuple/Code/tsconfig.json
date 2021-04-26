@@ -1,7 +1,0 @@
-{
-    "compilerOptions": {
-        "outDir": "js",
-        "removeComments": false,
-        "watch": true
-    }
-}

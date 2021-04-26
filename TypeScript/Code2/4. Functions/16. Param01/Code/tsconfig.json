@@ -1,8 +1,0 @@
-{
-    "compilerOptions": {
-        "outDir": "js",
-        "target": "ES6",
-        "removeComments": false,
-        "watch": true
-    }
-}

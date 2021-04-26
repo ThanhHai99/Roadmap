@@ -1,6 +1,0 @@
-*** TUPLE ***
-Cách khai báo:
-  <variable-name>: [<type>, <type>, ...]
-Example
-  let iii: [string, number, boolean, string];
-  iii = ["mot", 1, true, "hai"];

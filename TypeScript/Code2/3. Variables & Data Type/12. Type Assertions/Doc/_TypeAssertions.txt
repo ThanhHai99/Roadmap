@@ -1,2 +1,0 @@
-*** Type Assertions ***
-Chuyển đổi kiểu dữ liệu qua lại.

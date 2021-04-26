@@ -1,2 +1,0 @@
-*** ANY ***
-Thường dùng để định nghĩa biến hoặc hàm khi chưa biết rõ kiểu dữ liệu.

@@ -1,2 +1,0 @@
-*** Function Type ***
-Những cách khai báo hàm

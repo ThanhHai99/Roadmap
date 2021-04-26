@@ -1,4 +1,0 @@
-Compile each file
-tsc file-name.tsc
-Compile each file with watching option (auto update file when file are changed)
-tsc file-name.tsc -w

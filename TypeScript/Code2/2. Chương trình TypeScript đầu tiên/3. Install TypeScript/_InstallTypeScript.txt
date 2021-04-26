@@ -1,4 +1,0 @@
-INSTALL
-npm install -g typescript
-COMPILE
-tsc file-name.ts

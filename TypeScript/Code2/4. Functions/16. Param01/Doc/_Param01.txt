@@ -1,2 +1,0 @@
-*** Param1 ***
-Khai báo tham số

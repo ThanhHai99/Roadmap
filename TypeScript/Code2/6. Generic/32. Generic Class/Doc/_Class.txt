@@ -1,3 +1,0 @@
-*** Generic Class ***
-
-Ứng dụng: Một tham số nhưng có nhiều kiểu dữ liệu.
