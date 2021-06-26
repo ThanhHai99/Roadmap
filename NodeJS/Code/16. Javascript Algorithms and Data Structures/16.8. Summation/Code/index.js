@@ -24,9 +24,24 @@ let Summation1 = (a, b) => {
     return result.split("").reverse().join("");
 };
 
-(() => {
-    // console.log(Summation0(34539999345345675675685685, 549634088789789789789787898));
-    // console.log(Summation1("34539999345345675675685685", "549634088789789789789787898"));
-    console.log(Summation0(99, 3));
-    console.log(Summation1("99", "3"));
-})();
+let Summation2 = (a, b) => {
+    while (a.length !== b.length)
+        a.length > b.length ? b = "0" + b : a = "0" + a;
+    let rs = "", r = 0;
+    for (let i = a.length - 1; i >= 0 ; i--) {
+        let t0 = (parseInt(a[i]) + parseInt(b[i]) + r);
+        t0 > 9 ? r = 1 : r = 0;
+        if (i === 0) {
+            rs = t0.toString() + rs;
+            continue;
+        };
+        rs = t0 > 9 ? t0.toString().split("")[1] + rs : t0.toString().split("")[0] + rs;
+    };
+    return rs;
+};
+
+// console.log(Summation0(34539999345345675675685685, 549634088789789789789787898));
+// console.log(Summation1("34539999345345675675685685", "549634088789789789789787898"));
+console.log(Summation0(99, 33));
+console.log(Summation1("99", "33"));
+console.log(Summation2("99", "33"));
