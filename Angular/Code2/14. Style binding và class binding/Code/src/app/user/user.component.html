@@ -1,0 +1,6 @@
+<input placeholder="User Form" type="text" [(ngModel)] = "name">
+<h1 [style.color] = "isHighlight ? 'red' : 'black'">
+    Your name is : {{ name }}
+</h1>
+<div [class] = "isHighlight ? 'circle' : 'square'"></div>
+<div [class.circle]="!isHighlight" [class.square]="isHighlight"></div>

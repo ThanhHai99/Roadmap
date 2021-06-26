@@ -39,7 +39,7 @@ Bài 37: Sử dụng ngOnInit
 Bài 38: Giới thiệu bài tập thời tiết
 Bài 39: API open weather map
 Bài 40: Weather service
-Bài 41 Lấy nhiệt độ và hiển thị
+Bài 41: Lấy nhiệt độ và hiển thị
 Bài 42: Tính năng loading và xử lý lỗi
 Bài 43: Giới thiệu về form
 Bài 44: ngForm

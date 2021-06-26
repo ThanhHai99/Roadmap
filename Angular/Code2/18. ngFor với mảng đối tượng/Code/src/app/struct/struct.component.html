@@ -1,0 +1,4 @@
+<div *ngFor="let word of arrWords">
+    <h4 [ngStyle]="{ color: word.memorized ? 'green' : 'red' }">{{ word.en }}</h4>
+    <p>{{ word.vn }}</p>
+</div>
