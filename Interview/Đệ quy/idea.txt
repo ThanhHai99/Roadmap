@@ -1,0 +1,3 @@
+Phải có điều kiện dừng.
+Nếu điều kiện dừng sai sẽ lặp lại chính nó,
+Nếu điều kiện dừng đúng sẽ thực thi những hàm đã gọi trước đó.
