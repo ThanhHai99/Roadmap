@@ -1,0 +1,5 @@
+*** Tìm kiếm tuyến tính ***
+
+Thuật toán:
+- Duyệt từ đầu --> cuối mảng, khi nào gặp phần tử cần tìm thì trả về vị trí phần tử đó, và kết thúc chương trình.
+- Nếu không tìm thấy, trả về -1 và kết thúc chương trình.

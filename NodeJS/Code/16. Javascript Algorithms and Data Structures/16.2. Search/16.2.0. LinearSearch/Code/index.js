@@ -1,13 +1,11 @@
-let LinearSearch = (arr, keyword) => {
+let LinearSearch = (arr, keywordSearch) => {
     for (let i = 0; i < arr.length; i++ ) {
-        if (arr[i] == keyword) {
-            return true;
+        if (arr[i] === keywordSearch) {
+            return i;
         };
     };
-    return false;
+    return -1;
 };
 
-(() => {
-    let arr = [ "tran", "viet", "thanh", "hai" ];
-    console.log(LinearSearch(arr, "thanh"));
-})();
+let arr = [ "tran", "viet", "thanh", "hai" ];
+console.log(LinearSearch(arr, "thanh")); // 2
