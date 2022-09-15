@@ -1,0 +1,38 @@
+# docker-compose.yml
+
+version: "3.5"
+services:
+  app:
+    image: kimhuorlim/golang:1.14.4-alpine3.12
+    command: watch
+    volumes:
+      - .:/app
+      - go-mod:/go/pkg/mod
+      - build-cache:/root/.cache/go-build
+      - ~/.ssh/id_rsa:/root/.ssh/id_rsa
+    container_name: gorm_server
+    ports:
+      - 8080:8080
+    stdin_open: true
+    tty: true
+    env_file:
+      - .env
+  mysql:
+    image: mysql:5.7
+    container_name: gorm_db
+    environment:
+      MYSQL_DATABASE: gorm_todo
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+      MYSQL_ROOT_PASSWORD: password
+    restart: always
+    volumes:
+      - mysql_data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    env_file:
+      - .env
+volumes:
+  go-mod:
+  build-cache:
+  mysql_data:
