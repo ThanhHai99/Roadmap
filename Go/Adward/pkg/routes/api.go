@@ -4,6 +4,8 @@ import (
 	"adward/pkg/controllers"
 	"adward/pkg/services"
 	"github.com/gin-gonic/gin"
+	"github.com/shirou/gopsutil/host"
+	"net/http"
 )
 
 var (
@@ -15,13 +17,16 @@ func SetupRouter() *gin.Engine {
 	routes := gin.Default()
 	v1 := routes.Group("/api/v1")
 	{
-		v1.GET("adward", adwardController.Index)
-		v1.POST("adward", adwardController.Store)
-		v1.GET("/healthcheck", func(ctx *gin.Context) {
-			ctx.JSON(200, gin.H{
+		v1.GET("healthcheck", func(ctx *gin.Context) {
+			uptime, _ := host.Uptime()
+			ctx.JSON(http.StatusOK, gin.H{
 				"message": "OK",
+				"uptime": uptime,
 			})
 		})
+
+		v1.GET("adward", adwardController.Index)
+		v1.POST("adward", adwardController.Store)
 	}
 
 	return routes

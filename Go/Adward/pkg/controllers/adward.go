@@ -3,9 +3,8 @@ package controllers
 import (
 	"adward/pkg/models"
 	"adward/pkg/services"
-	"net/http"
-
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 type AdwardController interface {
@@ -22,7 +21,6 @@ func New(service services.AdwardService) AdwardController {
 		service: service,
 	}
 }
-
 func (c *controller) Index(ctx *gin.Context) {
 	ctx.JSON(http.StatusOK, c.service.All())
 }

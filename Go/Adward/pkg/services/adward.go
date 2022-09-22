@@ -1,11 +1,9 @@
 package services
 
-import (
-	"adward/pkg/models"
-)
+import "adward/pkg/models"
 
 type AdwardService interface {
-	Save(models.Adward) models.Adward
+	Save(adward models.Adward) models.Adward
 	All() []models.Adward
 }
 
